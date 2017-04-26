@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ReactXP | Rick Love&#39;s Development Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Finally, I found what I have been looking for years and experimented with creating multiple times: A way to develop native and web apps with the same code base (even the view layer). Let me be specifi">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ReactXP">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/2017-04-24 ReactXP/index.html">
+<meta property="og:site_name" content="Rick Love's Development Blog">
+<meta property="og:description" content="Finally, I found what I have been looking for years and experimented with creating multiple times: A way to develop native and web apps with the same code base (even the view layer). Let me be specifi">
+<meta property="og:updated_time" content="2017-04-26T10:52:02.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ReactXP">
+<meta name="twitter:description" content="Finally, I found what I have been looking for years and experimented with creating multiple times: A way to develop native and web apps with the same code base (even the view layer). Let me be specifi">
+  
+    <link rel="alternate" href="/atom.xml" title="Rick Love&#39;s Development Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Rick Love&#39;s Development Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Software Development, Machine Learning, Education, &amp; the Future</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017-04-24 ReactXP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/24/2017-04-24 ReactXP/" class="article-date">
+  <time datetime="2017-04-24T05:00:00.000Z" itemprop="datePublished">2017-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ReactXP
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Finally, I found what I have been looking for years and experimented with creating multiple times:</p>
+<p>A way to develop native and web apps with the same code base (even the view layer).</p>
+<p>Let me be specific, I’m not talking about hybrid apps. Of course it’s been possible to use Cordova and make a hybrid web app for many years, but the performance was not acceptable.</p>
+<p>We need native speed which means using native UI Components on the UI thread not blocked by the runtime or single thread of JavaScript. </p>
+<p>In the past few years, two major solutions have come out: React Native and Native Script.</p>
+<p>However, although these both provide a good solution for native speed mobile apps using JavaScript code, they don’t have a unified UI with the web browser.</p>
+<p>So view layer was still not cross platform and using them while trying to share a code base with the web was not easy.</p>
+<p>Leave it to Microsoft to solve it. They did. The Skype team needed the same thing I wanted: a single code base across all devices including the browser.</p>
+<p>So they made ReactXP. It is a library built on top of React and React Native that unifies the view layer using standard components.</p>
+<p>Now it is possible to define the view layer once and know it will look the same across all devices and browsers.</p>
+<p>Also, because it is built on top of React Native, dropping down to platform specific code is possible when needed. So that’s great when you want to expand your base web experience with extra device features in the app.</p>
+<p>As a bonus, because this is built by Microsoft who created Typescript, Typescript is fully supported without having to figure it out as you go. (They also support Flow as an alternative.) But if you have used Typescript and know some of the great advantages of using cutting edge JavaScript with type safety and documentation, you know it’s awesome.</p>
+<p>So this is finally the solution I have been waiting for: </p>
+<ul>
+<li>One UI to rule them all, </li>
+<li>One code to define them, </li>
+<li>One build to make them all,</li>
+<li>And in the stores deploy them.</li>
+</ul>
+<p>Or just use the web app if you don’t want to install, etc.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/24/2017-04-24 ReactXP/" data-id="cj1yylto900048sns1ipj47b0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/18/2017-04-18 GraphQL/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          GraphQL
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/25/2017-04-25 Azure Mobile Center/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Azure Mobile Center</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/26/2017-04-26 Automated Blood Scanner/">Automated Blood Scanner</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/25/2017-04-25 Azure Mobile Center/">Azure Mobile Center</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/24/2017-04-24 ReactXP/">ReactXP</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/18/2017-04-18 GraphQL/">GraphQL</a>
+          </li>
+        
+          <li>
+            <a href="/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/">Feature-Oriented Software Development and Feature-Organized Code</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Rick Love<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

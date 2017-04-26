@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Feature-Oriented Software Development and Feature-Organized Code | Rick Love&#39;s Development Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Software development is all about the apps. If you don’t have a user interface, then your software is pointless. There must be a way for somebody to work with your software to accomplish what they wan">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Feature-Oriented Software Development and Feature-Organized Code">
+<meta property="og:url" content="http://yoursite.com/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/index.html">
+<meta property="og:site_name" content="Rick Love's Development Blog">
+<meta property="og:description" content="Software development is all about the apps. If you don’t have a user interface, then your software is pointless. There must be a way for somebody to work with your software to accomplish what they wan">
+<meta property="og:updated_time" content="2017-04-18T17:10:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Feature-Oriented Software Development and Feature-Organized Code">
+<meta name="twitter:description" content="Software development is all about the apps. If you don’t have a user interface, then your software is pointless. There must be a way for somebody to work with your software to accomplish what they wan">
+  
+    <link rel="alternate" href="/atom.xml" title="Rick Love&#39;s Development Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Rick Love&#39;s Development Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Software Development, Machine Learning, Education, &amp; the Future</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2014-02-04 Feature-Oriented Software Development and Feature-Organized Code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/" class="article-date">
+  <time datetime="2014-02-04T06:00:00.000Z" itemprop="datePublished">2014-02-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Feature-Oriented Software Development and Feature-Organized Code
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Software development is all about the apps. If you don’t have a user interface, then your software is pointless. There must be a way for somebody to work with your software to accomplish what they want to do. These are the features: what your app can actually do. Really, an app is nothing more than a collection of features. The best apps have few features that are closely related and are exceptional in quality.</p>
+<p>Therefore, <em>software development should focus on developing features.</em></p>
+<p>All too often, we developers focus on the code, “Look how cool that code is.” Users don’t care. They want a cool feature that works – that is all. They don’t care about your hard work. If you don’t give them exceptional features, they will trash your app (1-star) and nobody will ever touch it again. </p>
+<p>We must focus on the features. We must make exceptional features that shine. That is the entire purpose of software development. In fact, maybe we should just drop that term and call ourselves “feature developers”. Software is pointless unless it contributes towards exceptional features.</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>We developers are overly focused on our code. Look at the OOP (Object Oriented Programming) paradigm for example. It’s main concern is how you design your class hierarchy. </p>
+<p>That has little to do with a feature. So we have Use Cases where we try to figure out every possible way an object might be used. That is getting closer to the features, but it is putting the developer’s concern (class design) ahead of the user’s concern (features).</p>
+<p>OOP solves many problems, but it also introduces a way of thinking that produces unnecessary complexity. A developer has the impression that he must design perfectly defined types that can handle all possible scenarios before programming can begin.This results in the common tendency of unexperienced programmers of trying to solve “world hunger” with every project. Many times he doesn’t even remember what feature he is trying to implement.</p>
+<p>However, even a developer with an idea of the desired features can face a complex project. At the beginning of a project, each class is well defined and exists in a small easy to read and understand file. However, each new feature introduces changes that can span multiple class files. Over time, these files grow bloated with unrelated code. Even more, as multiple developers modify those files for their own needs, they can contain multiple styles and design patterns that make the code for that class very difficult to understand. Feature dependencies can be strung throughout the code base. “You can’t change that because it will break this. Oh and users have become used to that bug so don’t fix it.” </p>
+<p>The entire project becomes a dark and dangerous place where you might violate some unwritten law by changing something you weren’t supposed to change. Then, you make yourself an enemy of the whole team who has to waste hours trying to trace down all the unexpected bugs caused by your change. As stress builds, the team becomes more concerned with who to blame rather than developing good software together. Obviously, this does not contribute to a positive development team.</p>
+<p>My observation is that the end result of traditional OOP is an exponential growth in the cost of adding each new feature to a project.</p>
+<p>Software development should not be object-oriented. In fact it should not be oriented to anything to do with the code itself. Software development should be feature-oriented. Developers should always have in mind what feature they are contributing towards. </p>
+<p>With the big picture of the target feature in mind, then a developer can use whatever code most simply implements that target feature.</p>
+<p>(Keep in mind that there are “system features” which provide the foundation on which the “user features” are built.)</p>
+<h3 id="Thinking-Differently-about-Code-Organization"><a href="#Thinking-Differently-about-Code-Organization" class="headerlink" title="Thinking Differently about Code Organization"></a>Thinking Differently about Code Organization</h3><p>My experience with C# and it’s changes over the years eventually led me to a different way of organizing my code. </p>
+<p>The introduction of partial classes to C# initially allowed a simple way to separate designer generated code from human code.</p>
+<p>Then later, extension methods allowed me, being used to strictly defined traditional OOP types, to start thinking about types that could be extended at a later time.</p>
+<p>Then, my exposure to javascript with its purely dynamic types made me realize even more possibilities about objects and type definitions and how they could be extended even at runtime as needed. </p>
+<p>In the end, these experiences led me to organize my code differently than I had been taught or had ever done before. In my latest project, I unintentionally organized my code in what I will call feature-organized.</p>
+<h3 id="Towards-Feature-Organized-Code"><a href="#Towards-Feature-Organized-Code" class="headerlink" title="Towards Feature-Organized Code"></a>Towards Feature-Organized Code</h3><p>As I was working on this project, I wanted a clean working space so that I could focus solely on a single feature at a time. Therefore, each time I started implementing a new feature, I added a new file to the project and kept all the code related to that feature in that file.</p>
+<p>However, I was still working with the same set of objects and their classes. Still, I wanted to keep all the additions to the classes near to the features that needed to use those additions. For example, when I needed to add another property to a class, I wanted that property to be defined right there in the same file with the logic that used that property, instead of going to the file where the class was originally defined. </p>
+<p>This was simple to do because of partial classes in C#. I was able to continue the definition of any classes in that feature file. I added whatever properties or methods needed to exist for that feature to work. Also included were classes that only had meaning for that specific feature and any processing for it.</p>
+<p>This would have been possible in<br>many languages, not just C#. It would be simple to implement in any language that has a mechanism to allow open type definitions that span multiple files or any language that supports dynamic types. (It is also possible in languages with closed type definitions, but not as simple.)</p>
+<h3 id="What-is-Feature-Organized-Code"><a href="#What-is-Feature-Organized-Code" class="headerlink" title="What is Feature-Organized Code?"></a>What is Feature-Organized Code?</h3><p>Feature-organized code is code that keeps all properties, methods, and any logic related to a single feature in the same place. </p>
+<p>The source files are grouped together by features rather than by class definitions.</p>
+<p>Instead of having everything about a  class exist in its own file, the parts of the class are defined where they are needed. </p>
+<p>Obviously, balance is needed. A good balance is to define the primary set of classes in the “core feature”. These core definitions would basically represent the data of each class by implementing a constructor to create the object and fields or properties to hold the data for that object. Then in the feature files, these core definitions can be extended with calculated properties and methods needed for that feature.</p>
+<p>The core feature is concerned about the construction of objects. Other features are concerned about using those objects. </p>
+<p>The code to implement each feature could be organized as a single file or a collection of closely related files:</p>
+<ul>
+<li>One file (Simple Features that require only a few types)</li>
+<li>Multiple files with a similar name prefix (In a project with a small number of features)</li>
+<li>A sub folder (In a medium project with complex features that only work when many objects coordinate)</li>
+<li>A sub folder for each app layer with similar naming (In a large project that includes multiple layers that each exist in their own projects: i.e. a Data Access Layer, Business Logic Layer, Application Layer, Unit Testing, etc.)</li>
+</ul>
+<h3 id="Advantages-of-Feature-Organized-Code"><a href="#Advantages-of-Feature-Organized-Code" class="headerlink" title="Advantages of Feature-Organized Code"></a>Advantages of Feature-Organized Code</h3><ul>
+<li>Singular Focus</li>
+</ul>
+<p>The developer sees only code that is relevant to a single feature in each file. He can focus entirely on that one feature without thinking about the concerns of other features. </p>
+<ul>
+<li>Predictable Locating of Feature Code</li>
+</ul>
+<p>Each feature has its own specific place among the many files of the project. Everything about that feature’s implementation can be found in those files.</p>
+<ul>
+<li>Clear Dependencies</li>
+</ul>
+<p>Every class and the properties and methods that are needed to implement a feature are all together in the same place. This provides a complete picture of all dependencies required for that feature.</p>
+<p>Also, if a feature depends on another feature, that can be clearly indicated in a comment at the top of the file. I refer to these as parent and child features.</p>
+<ul>
+<li>Isolation of Features</li>
+</ul>
+<p>The implementation of each feature is isolated from other unrelated features. In many cases, it is even possible to remove an entire feature and all the changes it introduces to the class hierarchy simply by removing those files from the project. This can be done without affecting any other features (except it’s child features).</p>
+<ul>
+<li>Rapid Orientation</li>
+</ul>
+<p>Since all code for a single feature is together, a developer can quickly orient himself with the entire scope of a feature. There is no need for him to comprehend the entire class hierarchy of the entire project. He must only understand the properties and methods currently being used by that single feature. This is simple because their definition is right there with the code that uses them. He has no need to dig through multiple files of class definitions looking for the various properties and methods of concern, being distracted and overwhelmed by everything not currently relevant. </p>
+<p>In addition, if each layer of the application is organized in a similar fashion he can quickly locate the business logic and data access relevant to that feature. In fact, if the data access layer is segmented in the same way, then he can also see what tables, columns, and other db objects are relevant to that feature.</p>
+<p>In this way, a developer can quickly get a full picture of everything relevant to that feature from the database all the way to the user interface. </p>
+<p>This is the key to development that does not scale up in cost as the project grows. Whether the project has 5 classes or 1,000, the developer can learn everything relevant by simply looking at the feature files. He doesn’t even need an IDE to help him randomly browse through the code, jumping to definitions that are scattered across thousands of files. He can simply read the files of that single feature to get a complete picture of it.</p>
+<ul>
+<li>Isolated Development</li>
+</ul>
+<p>One possibility that this provides is isolated development of features. Because all code for a feature must be in a certain location, developers can easily work on different features without conflicting with one another. Developers can make changes independently and quickly without worrying about who else might be affected by their work. Also, if a change is required beyond the current feature (like in a parent feature), they can communicate those needed changes to a senior developer who can then coordinate how to proceed.</p>
+<ul>
+<li>Secure and Simple Outsourcing</li>
+</ul>
+<p>For large projects, a sub project can be created which includes only a copy of the necessary features (the target feature and it’s parent features).</p>
+<p>This sub project would greatly improve the performance of the outsourcer because it presents him with only the relevant code. This reduces the likelihood that he will make changes in the wrong location or be overwhelmed by the complexity of a large project.</p>
+<p>It also improves security because the entire source code is no longer being passed on to a partially trusted party, nor is it necessary to allow him access to the team’s source control or other servers. This can be very important for large closed-source projects that have sensitive code.</p>
+<p>Also, the outsourcer can send his changes in just by zipping up the subfolder for the target feature. This outside code can then be code reviewed just by reading that small group of files without even needing an IDE. (This could even be done on a smart phone through email where the developer in charge of the outsourcing can quickly provide feedback to the outsourcer.)</p>
+<p>When the outsourced code reaches an acceptable point, it can easily be merged back into the main project simply by copying those files (likely into an isolated branch in source control). All affected files would be in one location and could easily be code reviewed and tested before being accepted into the main project.</p>
+<p>If this were a common scenario, it would even be possible to make some build tools that automate the process of creating these isolated sub projects for a single feature. The build tool would need only a list of features (the target feature and its parent features). Then it could simply include those folders and produce a new project file with references to only those items.</p>
+<p>This may even be the preferred means of development for the entire development team. It would greatly improve build times for large projects and would boost developer productivity by allowing them more freedom of control over their development environment. (They could work from home on their own machine for example.) This also introduces great training possibilities for new developers that would help them ease into familiarity with the main project without being overwhelmed by its large scope.</p>
+<ul>
+<li>No Ownership of Code</li>
+</ul>
+<p>Because every feature is isolated and relatively small in comparison to the entire project, it also remains as simple as possible. </p>
+<p>This prevents ownership concerns in the development team. Each developer works on a feature until it reaches maturity, then he moves onto another feature. Another developer may revisit that feature at a later point to improve it. Because of rapid orientation, any of the developers should be able to work with any feature. There are no hidden dependencies that will remain the secret of the “owner” of that code. Everything relevant and every dependency is contained in one small set of files.</p>
+<ul>
+<li>High Quality Features</li>
+</ul>
+<p>It can be simple to ensure that each feature contains every component that ensures high quality: Documentation, conformance to code conventions, unit tests, code coverage, code contracts, a polished user interface to that feature, etc.</p>
+<p>A feature would not be considered mature until it reaches the highest standards of your application. It can easily be excluded from release until it can meet those standards. </p>
+<p>This compels the development team to complete fewer high quality features instead of many mediocre features. </p>
+<p>This brings us back to feature-orientation. Again, an app is nothing more than a collection of features. This focus on high quality features produces apps that users enjoy and will outshine their competitors.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Feature-organization of code is a key to promoting a feature-oriented paradigm for software development.</p>
+<p>I will be using this concept in my own development and will later come back with some practical tips on how best to implement feature-organization.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/" data-id="cj1yylto300028snsgel37uku" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/18/2017-04-18 GraphQL/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">GraphQL</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/26/2017-04-26 Automated Blood Scanner/">Automated Blood Scanner</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/25/2017-04-25 Azure Mobile Center/">Azure Mobile Center</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/24/2017-04-24 ReactXP/">ReactXP</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/18/2017-04-18 GraphQL/">GraphQL</a>
+          </li>
+        
+          <li>
+            <a href="/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/">Feature-Oriented Software Development and Feature-Organized Code</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Rick Love<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

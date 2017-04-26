@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>GraphQL | Rick Love&#39;s Development Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="http://graphql.org/ GraphQL brings the power of the data query all the way down to the component level. Most data access requires multiple repetitve layers that slightly transform data:  Storage (Sql">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GraphQL">
+<meta property="og:url" content="http://yoursite.com/2017/04/18/2017-04-18 GraphQL/index.html">
+<meta property="og:site_name" content="Rick Love's Development Blog">
+<meta property="og:description" content="http://graphql.org/ GraphQL brings the power of the data query all the way down to the component level. Most data access requires multiple repetitve layers that slightly transform data:  Storage (Sql">
+<meta property="og:updated_time" content="2017-04-24T14:08:47.025Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GraphQL">
+<meta name="twitter:description" content="http://graphql.org/ GraphQL brings the power of the data query all the way down to the component level. Most data access requires multiple repetitve layers that slightly transform data:  Storage (Sql">
+  
+    <link rel="alternate" href="/atom.xml" title="Rick Love&#39;s Development Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Rick Love&#39;s Development Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Software Development, Machine Learning, Education, &amp; the Future</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017-04-18 GraphQL" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/18/2017-04-18 GraphQL/" class="article-date">
+  <time datetime="2017-04-18T05:00:00.000Z" itemprop="datePublished">2017-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GraphQL
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://graphql.org/" target="_blank" rel="external">http://graphql.org/</a></p>
+<p>GraphQL brings the power of the data query all the way down to the component level.</p>
+<p>Most data access requires multiple repetitve layers that slightly transform data:</p>
+<ul>
+<li>Storage (Sql or NoSql Data Store)</li>
+<li>Server (Rest or Ad-hoc Web Api)</li>
+<li>Client Side Http Requests (Ajax, RxJS, etc.)</li>
+<li>Client State (Angular Services, React Redux, React Mobx, etc.)</li>
+<li>Components</li>
+</ul>
+<p>In the above architecture, a query about a single object must be implemented at each level. Also, common patterns like filtering and paging must be handled at each level as well. </p>
+<p>To make a change on the UI that requires additional data about an object, each layer must be modified to provide that additional data. Not only is this tedius work, it also affects the entire code base and could easily introduce bugs requiring testing at each level.</p>
+<h3 id="GraphQL-Solves-Client-Data-Access"><a href="#GraphQL-Solves-Client-Data-Access" class="headerlink" title="GraphQL Solves Client Data Access"></a>GraphQL Solves Client Data Access</h3><p>GraphQL solves that problem by allowing the client to define the structure of the query. And even better, each component can define it’s own data needs.</p>
+<ul>
+<li>Component Data Query</li>
+<li>Component</li>
+</ul>
+<h3 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h3><p>Here is a sample using React-Apollo (ES6):</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">TodoApp</span>(<span class="params">&#123; data: &#123; todos, refetch &#125; &#125;</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> (</div><div class="line">    &lt;div&gt;</div><div class="line">      &lt;button onClick=&#123;() =&gt; refetch()&#125;&gt;</div><div class="line">        Refresh</div><div class="line">      &lt;/button&gt;</div><div class="line">      &lt;ul&gt;</div><div class="line">        &#123;todos.map(todo =&gt; (</div><div class="line">          &lt;li key=&#123;todo.id&#125;&gt;</div><div class="line">            &#123;todo.text&#125;</div><div class="line">          &lt;/li&gt;</div><div class="line">        ))&#125;</div><div class="line">      &lt;/ul&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  );</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> graphql(gql<span class="string">`</span></div><div class="line">  query TodoAppQuery &#123;</div><div class="line">    todos &#123;</div><div class="line">      id</div><div class="line">      text</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">`)(TodoApp);</div></pre></td></tr></table></figure>
+<p>The actual GraphQL Query is here:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">query TodoAppQuery &#123;</div><div class="line">    todos &#123;</div><div class="line">        id</div><div class="line">        text</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>In this example, the query is requesting <em>todos</em> with the <em>id</em> and <em>text</em> of each.</p>
+<p>Whenever, it is time to display this component, that query is automatically requested and then injected into the React component’s data object.</p>
+<p>Without getting into the details of how that works, whenever something triggers the UI view to change, all the new queries will be combined together into a main query that is then sent to the server endpoint. </p>
+<p>What is even better, most client side implementations automatically cache the requests and any data already availabe in the cache will not be requested from the server a second time (of course this can be controlled in case a fresh copy is needed).</p>
+<h3 id="So-How-Does-the-Server-Provide-the-Data"><a href="#So-How-Does-the-Server-Provide-the-Data" class="headerlink" title="So How Does the Server Provide the Data?"></a>So How Does the Server Provide the Data?</h3><p>On the server side, the server has a single GraphQL endpoint that will receive all requests. It is the responsibility of the server to parse the request and give only the requested data back to the client.</p>
+<p>Of course, the standard libraries handle the parsing and the developer has only one requirement:</p>
+<p>Resolve the data request for each data type:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> resolverMap = &#123;</div><div class="line">  <span class="attr">Query</span>: &#123;</div><div class="line">    author(obj, args, context, info) &#123;</div><div class="line">      <span class="keyword">return</span> getAuthorById(args.id);</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">Author</span>: &#123;</div><div class="line">    posts(author) &#123;</div><div class="line">      <span class="keyword">return</span> getPostsByAuthorId(author.id);</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>The advantage of this, is that the developer can focus on a single data type at once without worrying about nested types or deciding how deeply nested the response data needs to be.</p>
+<p>In the example above, each has a specific purpose: return a single author or return the posts that belong to an author:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">getAuthorById(args.id)</div><div class="line">...</div><div class="line">getPostsByAuthorId(author.id)</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>The <em>getAuthorById</em> doesn’t have to worry about whether to return posts or what data about the nested posts might be needed by the client. It just returns the author data only. Likewise, the <em>getPostsByAuthorId</em> has a very clean purpose and doesn’t have to worry about nested objects.</p>
+<p>By returning on the object and the entire object, the framework can automatically prune unnecessary data and combine the multiple objects into the requested object graph which was requested by the client.</p>
+<p>Also, the GraphQL libraries support Promises and so those resolver methods can use async/await and have a very clean implementation.</p>
+<p>The end result, is that the GraphQL library will wait for all the promises, combine all the data, prune extra data, and return exactly what was requested in a single network response.</p>
+<h3 id="So-How-Does-the-Client-Change-the-Data"><a href="#So-How-Does-the-Client-Change-the-Data" class="headerlink" title="So How Does the Client Change the Data?"></a>So How Does the Client Change the Data?</h3><p>Another cool part of GraphQL is how data changes. In GraphQL, a data change is called a mutation. </p>
+<p>The nice thing about a mutation is that it supports Optimistic UI. This means that the ui data is modified locally on the client while being processed on the server. This allows the UI to update with a preview of the data change while waiting for the server response. Then when the server sends the actual response, it can replace the temporary optimistic data. This is one of the benefits of a mutation compared to a simple Rest Post.</p>
+<p>On the server side these mutations must be implemented in the same way as the resolvers:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> resolverMap = &#123;</div><div class="line">...</div><div class="line">  Mutation: &#123;</div><div class="line">    addAuthor(_, &#123; firstName, lastName &#125;) &#123;</div><div class="line">      ...</div><div class="line">      return author;</div><div class="line">    &#125;,</div><div class="line">  &#125;,</div><div class="line">...</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>The differences with a resolve query are easily seen below:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">Query: &#123;</div><div class="line">    <span class="comment">// Get an author (args contains the author id)</span></div><div class="line">    author(obj, <span class="attr">args</span>: &#123; id &#125;, context, info)...</div><div class="line"></div><div class="line">...</div><div class="line">Mutation: &#123;</div><div class="line">    <span class="comment">// Create an author (args )</span></div><div class="line">    addAuthor(_, <span class="attr">args</span>: &#123; firstName, lastName &#125;)...</div></pre></td></tr></table></figure>
+<p>Really, the only difference is the Query and Mutation keyword. They both use the 2nd parameter as the args and use those args to either get data or modify it.</p>
+<h3 id="This-Looks-Cool-Too-Bad-I-Can’t-Use-it"><a href="#This-Looks-Cool-Too-Bad-I-Can’t-Use-it" class="headerlink" title="This Looks Cool, Too Bad I Can’t Use it"></a>This Looks Cool, Too Bad I Can’t Use it</h3><p>That’s where it get’s interesting. It is possible to use the parser on the client side and basically wrap a Rest Api with a GraphQL schema which you can use in your client side code.</p>
+<p>Then, the next step is to move this to the server and slowly replace the REST calls with direct calls to the necessary resources.</p>
+<p>This provides an adoption path where it can be used in client side web apps today.</p>
+<p>This video gives a good overview of that process:</p>
+<p><a href="https://www.youtube.com/watch?v=UBGzsb2UkeY" target="_blank" rel="external">https://www.youtube.com/watch?v=UBGzsb2UkeY</a></p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><p>I found two implementations of the GraphQL:</p>
+<ul>
+<li>Relay (By Facebook and Designed for React)<ul>
+<li><a href="https://facebook.github.io/relay/" target="_blank" rel="external">https://facebook.github.io/relay/</a></li>
+</ul>
+</li>
+<li>Apollo (Better Design, Open Source Community, and works with Angular2 in addition to React)<ul>
+<li><a href="http://dev.apollodata.com/" target="_blank" rel="external">http://dev.apollodata.com/</a></li>
+</ul>
+</li>
+</ul>
+<p>I also found a VSCode extension that provides all the cool editor features we love:</p>
+<ul>
+<li>Github: kumarharsh/graphql-for-vscode <ul>
+<li><a href="https://github.com/kumarharsh/graphql-for-vscode" target="_blank" rel="external">https://github.com/kumarharsh/graphql-for-vscode</a></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/18/2017-04-18 GraphQL/" data-id="cj1yylto700038snsf22kbfi6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Feature-Oriented Software Development and Feature-Organized Code
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/24/2017-04-24 ReactXP/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ReactXP</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/26/2017-04-26 Automated Blood Scanner/">Automated Blood Scanner</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/25/2017-04-25 Azure Mobile Center/">Azure Mobile Center</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/24/2017-04-24 ReactXP/">ReactXP</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/18/2017-04-18 GraphQL/">GraphQL</a>
+          </li>
+        
+          <li>
+            <a href="/2014/02/04/2014-02-04 Feature-Oriented Software Development and Feature-Organized Code/">Feature-Oriented Software Development and Feature-Organized Code</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Rick Love<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
